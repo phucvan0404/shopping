@@ -27,6 +27,9 @@ $(document).ready(() => {
     $(".show-detail #detail #close i").click((e) => {
         $(".show-detail").addClass("none");
     })
+    $(".store #store #close i").click((e) => {
+        $(".store").addClass("none");
+    })
     $(".all-product .mb-5 a").click((e) => {
         const idx = $(e.target).attr("data");
         const currentData = data[parseInt(idx)];  
@@ -44,5 +47,12 @@ $(document).ready(() => {
         }else{
             $(".box-detail #detail #info-detail #giagoc").addClass("none");
         }
+    })
+    $(".show-detail #slide-img img").click((e) => {
+        var src = $(e.target).attr("src");
+        $(".show-detail #main-img img").attr("src", src);
+    })
+    $(".show-store").click((e) => {
+        $(".store").removeClass("none");
     })
 })

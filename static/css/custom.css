@@ -27,6 +27,8 @@ body {
     padding: 40px;
     box-shadow: 0px 0px 10px 3px #6a6a76;
     position: relative;
+    max-height: 700px;
+    overflow-y: scroll;
 }
 .box-detail #detail #close,
 .box-store #store #close {
@@ -137,4 +139,7 @@ body {
 .payment #code-sale button:focus{
     border-color: #ced4da !important;
     box-shadow:none !important;
+}
+.box-detail #list-size .btn-dark {
+    color:white !important;
 }

@@ -20,6 +20,7 @@
     <link href="./static/css/styles.css" rel="stylesheet" />
     <link href="./static/css/custom.css" rel="stylesheet" />
     <link href="./static/css/all.css" rel="stylesheet" />
+    
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -51,7 +52,7 @@
             <button class="btn btn-outline-dark show-store" type="button">
               <i class="bi-cart-fill me-1"></i>
               Giỏ hàng
-              <span class="badge bg-dark text-white ms-1 rounded-pill">3</span>
+              <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
             </button>
           </form>
         </div>
@@ -69,6 +70,116 @@
     </header>
     <section class="py-5">
       <div class="container px-4 px-lg-5 mt-5">
+        <div
+          class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center all-product"
+        >
+          <div class="col mb-5">
+            <div class="card h-100">
+              <img
+                class="card-img-top"
+                src="./static/img/slide/1.png"
+                alt="..."
+              />
+              <div class="card-body p-4">
+                <div class="text-center">
+                  <h5 class="fw-bolder">Nike Black</h5>
+                  2.000.000₫
+                </div>
+              </div>
+              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center">
+                  <a class="btn btn-outline-dark mt-auto" data="0" href="#"
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <div
+                class="badge bg-dark text-white position-absolute"
+                style="top: 0.5rem; right: 0.5rem"
+              >
+                Giảm giá
+              </div>
+              <img
+                class="card-img-top"
+                src="./static/img/slide/2.png"
+                alt="..."
+              />
+              <div class="card-body p-4">
+                <div class="text-center">
+                  <h5 class="fw-bolder">Nike White</h5>
+                  <span class="text-muted text-decoration-line-through"
+                    >4.500.000₫</span
+                  >
+                  3.000.000₫
+                </div>
+              </div>
+              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center">
+                  <a class="btn btn-outline-dark mt-auto" data="1" href="#"
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <div
+                class="badge bg-dark text-white position-absolute"
+                style="top: 0.5rem; right: 0.5rem"
+              >
+                Giảm giá
+              </div>
+              <img
+                class="card-img-top"
+                src="./static/img/slide/3.png"
+                alt="..."
+              />
+              <div class="card-body p-4">
+                <div class="text-center">
+                  <h5 class="fw-bolder">Nike Red</h5>
+                  <span class="text-muted text-decoration-line-through"
+                    >10.000.000₫</span
+                  >
+                  6.000.000₫
+                </div>
+              </div>
+              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center">
+                  <a class="btn btn-outline-dark mt-auto" data="2" href="#"
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-5">
+            <div class="card h-100">
+              <img
+                class="card-img-top"
+                src="./static/img/slide/4.png"
+                alt="..."
+              />
+              <div class="card-body p-4">
+                <div class="text-center">
+                  <h5 class="fw-bolder">Nike Green</h5>
+                  4.000.000₫
+                </div>
+              </div>
+              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center">
+                  <a class="btn btn-outline-dark mt-auto" data="3" href="#"
+                    >Xem chi tiết</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div
           class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center all-product"
         >
@@ -217,7 +328,7 @@
               <hr />
               <p>Size:</p>
               <div id="list-size">
-                <button class="btn btn-outline-dark">38</button>
+                <button class="btn btn-outline-dark btn-dark">38</button>
                 <button class="btn btn-outline-dark">39</button>
                 <button class="btn btn-outline-dark">40</button>
                 <button class="btn btn-outline-dark">41</button>
@@ -228,14 +339,17 @@
               <hr />
               <p>Số lượng:</p>
               <div id="quality">
-                <button class="btn btn-outline-dark">-</button>
-                <input type="text" value="1" />
-                <button class="btn btn-outline-dark">+</button>
+                <button class="btn btn-outline-dark _sub_quality">-</button>
+                <input class="_quality" type="text" value="1" />
+                <button class="btn btn-outline-dark _add_quality">+</button>
               </div>
               <hr />
-              <button type="button" class="btn btn-outline-dark">
+              <button type="button" class="btn btn-outline-dark _add_store">
                 Thêm vào giỏ hàng
               </button>
+              <div style="margin-top:10px;" class="alert alert-success none" role="alert">
+                Thêm đơn hàng thành công
+              </div>
             </div>
           </div>
         </div>
@@ -248,9 +362,9 @@
             <i class="fa-regular fa-xmark"></i>
           </div>
           <div class="row" style="margin-top: 20px">
-            <div class="col-lg-8">
+            <div class="col-lg-7">
               <div class="allStore">
-                <div class="itemStore">
+                <!-- <div class="itemStore">
                   <div id="img">
                     <img src="./static/img/product1/1.jpg" />
                   </div>
@@ -288,13 +402,14 @@
                     </p>
                     <a href="#">Xóa</a>
                   </div>
-                </div>
+                </div> -->
               </div>
+              
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-5">
               <div class="payment">
                 <div id="total">
-                  <p>Tổng tiền: <span style="float:right;">12.000.000₫</span></p>
+                  <p>Tổng tiền: <span style="float:right;"></span></p>
                 </div>
                 <div id="code-sale">
                   <h5>Mã giảm giá</h5>

@@ -5,7 +5,8 @@ body {
 }
 
 .show-detail,
-.store {
+.store,
+.show-user-account {
     position: fixed;
     background:#a7a6a68c;
     width:100%;
@@ -14,14 +15,16 @@ body {
     left:0;
 }
 .box-detail,
-.box-store {
+.box-store,
+.box-user {
     position: absolute;
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
 }
 .box-detail #detail,
-.box-store #store {
+.box-store #store,
+.box-user #user {
     background: white;
     border-radius: 5px;
     padding: 40px;
@@ -31,14 +34,16 @@ body {
     overflow-y: scroll;
 }
 .box-detail #detail #close,
-.box-store #store #close {
+.box-store #store #close,
+.box-user #user #close {
     position: absolute;
     top: 10px;
     right: 10px;
     cursor: pointer;
 }
 .box-detail #detail #close i,
-.box-store #store #close i {
+.box-store #store #close i,
+.box-user #user #close i {
     font-weight: bold;
     font-size: 25px;
 }

@@ -33,6 +33,12 @@ $(document).ready(() => {
     $(".store #store #close i").click((e) => {
         $(".store").addClass("none");
     })
+    $(".show-user-account #close i").click((e) => {
+        $(".show-user-account").addClass("none");
+    })
+    $(".show-account").click((e) => {
+        $(".show-user-account").removeClass("none");
+    })
     $(".all-product .mb-5 a").click((e) => {
         const idx = $(e.target).attr("data");
         const currentData = data[parseInt(idx)];
@@ -140,5 +146,13 @@ $(document).ready(() => {
         $(e.target).addClass("btn-dark")
         // currentSize = parseInt($(e.target).val());
 
+    })
+    $(".sw-signup").click((e) => {
+        $("#signin").addClass("none");
+        $("#signup").removeClass("none");
+    })
+    $(".sw-signin").click((e) => {
+        $("#signup").addClass("none");
+        $("#signin").removeClass("none");
     })
 })
